@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
 export {mongoose}
+dotenv.config();
 
-const MONGO_URI = 'mongodb://localhost:27017/contact_manager';
+const MONGO_URI = process.env.MONGODB_URI;
 
 export const connectDB = async () => {
     try {

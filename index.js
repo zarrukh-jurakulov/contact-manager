@@ -1,11 +1,9 @@
 import express from 'express';
-import dotenv from "dotenv";
 import cors from 'cors';
 import bodyParser from "body-parser";
 import {connectDB} from './db.js';
 import contactRoutes from './routes/contactRoutes.js';
 
-dotenv.config();
 connectDB();
 
 const app = express();
